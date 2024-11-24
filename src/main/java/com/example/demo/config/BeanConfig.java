@@ -1,14 +1,19 @@
 package com.example.demo.config;
 
+import com.example.demo.adapter.gateway.interfaces.impl.AtualizarProducaoAdapter;
+import com.example.demo.adapter.gateway.interfaces.impl.BuscarProducaoAdapter;
 import com.example.demo.adapter.gateway.interfaces.producao.AtualizarProducaoAdapterPort;
 import com.example.demo.adapter.gateway.interfaces.producao.ListarProducaoAdapterPort;
+import com.example.demo.adapter.gateway.interfaces.producao.NotificaConclusaoPedidoAdapterPort;
 import com.example.demo.adapter.gateway.interfaces.producao.SalvarProducaoAdapterPort;
 import com.example.demo.core.usecase.impl.AlterarProducaoUseCase;
 import com.example.demo.core.usecase.impl.BuscarProducaoUseCase;
+import com.example.demo.core.usecase.impl.CriarProducaoUseCase;
 import com.example.demo.core.usecase.impl.ListarProducaoUseCase;
 import com.example.demo.core.usecase.impl.SalvarProducaoUseCase;
 import com.example.demo.core.usecase.interfaces.producao.AlterarProducaoUseCasePort;
 import com.example.demo.core.usecase.interfaces.producao.BuscarProducaoUseCasePort;
+import com.example.demo.core.usecase.interfaces.producao.CriarProducaoUseCasePort;
 import com.example.demo.core.usecase.interfaces.producao.ListarProducaoUseCasePort;
 import com.example.demo.core.usecase.interfaces.producao.SalvarProducaoUseCasePort;
 import com.example.demo.infrastructure.repository.ProducaoRepository;
@@ -36,5 +41,10 @@ public class BeanConfig {
     @Bean
     public BuscarProducaoUseCasePort buscarProducaoUseCasePort(ProducaoRepository producaoRepository){
         return new BuscarProducaoUseCase(producaoRepository);
+    }
+
+    @Bean
+    public CriarProducaoUseCasePort criarProducaoUseCasePort(AtualizarProducaoAdapter atualizarProducaoAdapter, BuscarProducaoAdapter buscarProducaoAdapter, NotificaConclusaoPedidoAdapterPort notificaConclusaoPedidoAdapterPort){
+        return new CriarProducaoUseCase(atualizarProducaoAdapter, buscarProducaoAdapter, notificaConclusaoPedidoAdapterPort);
     }
 }

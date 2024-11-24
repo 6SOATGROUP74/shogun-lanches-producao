@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ListarProducaoUseCasePort {
    List<Producao> execute();
-   Producao listarPorNumeroPedido(String numeroPedido);
+   Producao listarPorNumeroPedido(Long numeroPedido);
 }

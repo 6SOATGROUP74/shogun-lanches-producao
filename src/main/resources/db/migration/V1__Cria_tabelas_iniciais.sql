@@ -22,6 +22,7 @@ USE `db_soat_producao` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_soat_producao`.`tb_producao` (
     `id_producao` BIGINT NOT NULL AUTO_INCREMENT,
+    `id_pagamento` BIGINT NOT NULL,
     `numero_pedido` BIGINT NOT NULL,
     `etapa` VARCHAR(255) NULL,
     `data_criacao` DATETIME NULL DEFAULT NULL,
