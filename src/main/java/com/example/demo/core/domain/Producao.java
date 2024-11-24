@@ -3,7 +3,8 @@ package com.example.demo.core.domain;
 public class Producao {
 
     private Long idProducao;
-    private String numeroPedido;
+    private Long idPagamento;
+    private Long numeroPedido;
     private String etapa;
     private String dataCriacao;
     private String dataAtualizacao;
@@ -16,11 +17,19 @@ public class Producao {
         this.idProducao = idProducao;
     }
 
-    public String getNumeroPedido() {
+    public Long getIdPagamento() {
+        return idPagamento;
+    }
+
+    public void setIdPagamento(Long idPagamento) {
+        this.idPagamento = idPagamento;
+    }
+
+    public Long getNumeroPedido() {
         return numeroPedido;
     }
 
-    public void setNumeroPedido(String numeroPedido) {
+    public void setNumeroPedido(Long numeroPedido) {
         this.numeroPedido = numeroPedido;
     }
 
@@ -52,7 +61,8 @@ public class Producao {
     public String toString() {
         return "Producao{" +
                 "idProducao=" + idProducao +
-                ", numeroPedido='" + numeroPedido + '\'' +
+                ", idPagamento=" + idPagamento +
+                ", numeroPedido=" + numeroPedido +
                 ", etapa='" + etapa + '\'' +
                 ", dataCriacao='" + dataCriacao + '\'' +
                 ", dataAtualizacao='" + dataAtualizacao + '\'' +

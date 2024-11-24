@@ -20,8 +20,11 @@ public class ProducaoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idProducao;
 
+    @Column(name = "id_pagamento")
+    private Long idPagamento;
+
     @Column(name = "numero_pedido")
-    private String numeroPedido;
+    private Long numeroPedido;
 
     @Column(name = "etapa")
     private String etapa;

@@ -24,7 +24,7 @@ public class ListarProducaoUseCase implements ListarProducaoUseCasePort {
     }
 
     @Override
-    public Producao listarPorNumeroPedido(String numeroPedido) {
+    public Producao listarPorNumeroPedido(Long numeroPedido) {
         logger.info("m=listarPorCodReferencia, msg=Lista por número de pedido={}", numeroPedido);
         return listarProducaoAdapterPort.listarPorNumeroPedido(numeroPedido);
     }

@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ListarProducaoAdapterPort {
    List<Producao> listarTodasProducoes();
-   Producao listarPorNumeroPedido(String numeroPedido);
+   Producao listarPorNumeroPedido(Long numeroPedido);
 }

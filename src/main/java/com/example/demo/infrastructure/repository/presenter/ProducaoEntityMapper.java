@@ -23,9 +23,9 @@ public interface ProducaoEntityMapper {
     ProducaoEntity mapFrom(Producao producao);
 
     Producao mapFrom(ProducaoEntity producaoEntity);
-    
+
     List<Producao> mapFrom(List<ProducaoEntity> producaoEntity);
-    
+
     ProducaoEntity updateFrom(Producao producao);
 
     default String dataHoraAtual() {
@@ -33,8 +33,9 @@ public interface ProducaoEntityMapper {
     }
 
     @AfterMapping
-    default ProducaoEntity afterMapping(@MappingTarget ProducaoEntity entity, Producao producao){
+    default ProducaoEntity afterMapping(@MappingTarget ProducaoEntity entity, Producao producao) {
         entity.setIdProducao(producao.getIdProducao());
+        entity.setIdPagamento(producao.getIdPagamento());
         entity.setNumeroPedido(producao.getNumeroPedido());
         entity.setEtapa(producao.getEtapa());
         entity.setDataCriacao(producao.getDataCriacao());
