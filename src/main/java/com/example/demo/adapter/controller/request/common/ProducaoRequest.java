@@ -1,8 +1,10 @@
 package com.example.demo.adapter.controller.request.common;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 import lombok.Data;
 
+@Builder
 @Data
 public class ProducaoRequest {
 
