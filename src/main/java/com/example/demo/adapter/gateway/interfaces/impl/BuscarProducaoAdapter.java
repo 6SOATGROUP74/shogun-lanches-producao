@@ -11,16 +11,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class BuscarProducaoAdapter implements BuscarProducaoAdapterPort {
 
-    private final ProducaoRepository pedidoRepository;
+    private final ProducaoRepository producaoRepository;
 
-    public BuscarProducaoAdapter(ProducaoRepository pedidoRepository) {
-        this.pedidoRepository = pedidoRepository;
+    public BuscarProducaoAdapter(ProducaoRepository producaoRepository) {
+        this.producaoRepository = producaoRepository;
     }
 
     @Override
     public Producao execute(Long idProducao) {
         logger.info("m=execute, msg=Consultando na base informações da producao, producaoId={}", idProducao);
-        return ProducaoEntityMapper.INSTANCE.mapFrom(pedidoRepository.findById(idProducao).orElse(null));
+        return ProducaoEntityMapper.INSTANCE.mapFrom(producaoRepository.findById(idProducao).orElse(null));
     }
 
     private Logger logger = LoggerFactory.getLogger(BuscarProducaoAdapter.class);

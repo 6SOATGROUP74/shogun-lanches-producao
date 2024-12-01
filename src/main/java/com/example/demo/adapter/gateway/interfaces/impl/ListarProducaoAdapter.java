@@ -25,6 +25,6 @@ public class ListarProducaoAdapter implements ListarProducaoAdapterPort {
 
     @Override
     public Producao listarPorNumeroPedido(Long numeroPedido) {
-        return ProducaoEntityMapper.INSTANCE.mapFrom(ProducaoMapper.INSTANCE.mapFrom(producaoRepository.findByNumeroPedido(numeroPedido)));
+        return ProducaoEntityMapper.INSTANCE.mapFrom(producaoRepository.findByNumeroPedido(numeroPedido));
     }
 }
