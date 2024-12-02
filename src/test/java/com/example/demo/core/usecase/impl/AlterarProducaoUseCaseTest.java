@@ -20,7 +20,7 @@ class AlterarProducaoUseCaseTest {
     AlterarProducaoUseCase alterarProducaoUseCase = new AlterarProducaoUseCase(atualizarProducaoAdapterPort, buscarProducaoUseCasePort);
 
     @Test
-    public void deveAtualizarProducaoComSucesso(){
+    void deveAtualizarProducaoComSucesso(){
         Long producaoId = 1L;
         Producao producao = gerarProducao();
 

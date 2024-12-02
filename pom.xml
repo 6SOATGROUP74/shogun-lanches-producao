@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>shogun-lanches-producao</artifactId>
-	<name>tech-challenge-6soat</name>
+	<name>shogun-lanches-producao</name>
 	<version>1</version>
 	<description>Demo project for Spring Boot</description>
 
