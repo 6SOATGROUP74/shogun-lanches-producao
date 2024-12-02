@@ -22,7 +22,7 @@ class AtualizarProducaoAdapterTest {
         Producao producao = gerarProducao();
         ProducaoEntity producaoEntity = gerarProducaoEntity(producao);
 
-        when(producaoRepository.save(producaoEntity)).thenReturn(producaoEntity);
+        when(producaoRepository.save(any(ProducaoEntity.class))).thenReturn(producaoEntity);
 
         atualizarProducaoAdapter.execute(producao);
 

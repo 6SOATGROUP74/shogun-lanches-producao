@@ -30,8 +30,8 @@ class ConsumidorProducaoAdapterTest {
 
         Producao producao = gerarProducao();
 
-        when(salvarProducaoAdapterPort.execute(producao)).thenReturn(producao);
-        when(criarProducaoUseCasePort.criarProducao(producao)).thenReturn(producao);
+        when(salvarProducaoAdapterPort.execute(any(Producao.class))).thenReturn(producao);
+        when(criarProducaoUseCasePort.criarProducao(any(Producao.class))).thenReturn(producao);
 
         consumidorProducaoAdapter.consomeEvento(producaoRequest);
 

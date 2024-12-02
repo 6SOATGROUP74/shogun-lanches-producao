@@ -13,8 +13,6 @@ public interface ProducaoMapper {
 
     ProducaoMapper INSTANCE = Mappers.getMapper(ProducaoMapper.class);
 
-    List<ProducaoEntity> mapFrom(List<Producao> producaoList);
-
     ProducaoEntity mapFrom(Producao producao);
 
     @Mapping(target = "idProducao", source = "producaoEntity.idProducao")
@@ -25,5 +23,4 @@ public interface ProducaoMapper {
     @Mapping(target = "dataAtualizacao", source = "producaoEntity.dataAtualizacao")
     Producao mapFrom(ProducaoEntity producaoEntity);
 
-    List<Producao> mapfrom(List<ProducaoEntity> producaoEntityList);
 }

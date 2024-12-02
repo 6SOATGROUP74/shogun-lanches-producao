@@ -18,15 +18,10 @@ public interface ProducaoEntityMapper {
 
     ProducaoEntityMapper INSTANCE = Mappers.getMapper(ProducaoEntityMapper.class);
 
-    @Mapping(target = "dataCriacao", expression = "java(dataHoraAtual())")
-    @Mapping(target = "dataAtualizacao", expression = "java(dataHoraAtual())")
-    ProducaoEntity mapFrom(Producao producao);
 
     Producao mapFrom(ProducaoEntity producaoEntity);
 
     List<Producao> mapFrom(List<ProducaoEntity> producaoEntity);
-
-    ProducaoEntity updateFrom(Producao producao);
 
     default String dataHoraAtual() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
@@ -44,5 +39,4 @@ public interface ProducaoEntityMapper {
 
     }
 
-    Producao mapFrom(Optional<ProducaoEntity> producaoEntity);
 }
