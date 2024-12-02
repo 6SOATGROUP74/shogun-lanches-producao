@@ -76,7 +76,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_REPOSITORY }}:prod
+          tags: 6soatgroup74/shogun-lanches-producao:prod
 
   deploy:
     name: Deploy to EKS
@@ -109,5 +109,4 @@ jobs:
           kubectl apply -f infra/app/app-nlb.yaml
           kubectl apply -f infra/app/app-opaque.yaml
           kubectl apply -f infra/app/app-svc.yaml
-          kubectl apply -f infra/app/service-rds.yaml
           kubectl apply -f infra/service-account.yaml
