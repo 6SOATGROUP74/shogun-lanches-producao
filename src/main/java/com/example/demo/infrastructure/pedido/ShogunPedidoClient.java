@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(name = "ShogunPedidoClient", url = "${shogun.lanches.pedido.url}")
 public interface ShogunPedidoClient {
 
-    @PutMapping(value = "/notifica-producao-concluida",consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(value = "/v1/pedidos/notifica-producao-concluida",consumes = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<?> notificaConclusaoDoPedido(@RequestBody AtualizaPedidoRequest atualizaPedidoRequest);
 
 }

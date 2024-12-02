@@ -118,11 +118,6 @@
 
 		<dependency>
 			<groupId>io.awspring.cloud</groupId>
-			<artifactId>spring-cloud-starter-aws</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>io.awspring.cloud</groupId>
 			<artifactId>spring-cloud-aws-starter-sqs</artifactId>
 		</dependency>
 
