@@ -14,5 +14,4 @@ public interface ShogunPedidoClient {
 
     @PutMapping(value = "/notifica-producao-concluida",consumes = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<?> notificaConclusaoDoPedido(@RequestBody AtualizaPedidoRequest atualizaPedidoRequest);
-
 }
