@@ -13,7 +13,7 @@ public class DefinicaoPassos {
 
     private Response response;
 
-    private String ENDPOINT_PRODUCAO = "http://localhost:8099/v1/producao";
+    private String ENDPOINT_PRODUCAO = "http://aa46e0980f4af4642aab860af6459ca8-1093881436.us-east-1.elb.amazonaws.com/v1/producao";
 
     @Quando("receber uma solicitação de notificação de conclusão de pedido")
     public void um_recebimento_de_uma_solicitação_de_pagamento() {
