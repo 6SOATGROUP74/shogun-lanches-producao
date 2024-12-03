@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: app-configmap
+  name: app-producao-configmap
 data:
-  MYSQL_URL: jdbc:mysql://shogun-database.clehkuwl1rmr.us-east-1.rds.amazonaws.com:3306/db_soat_producao?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+  MYSQL_URL: jdbc:mysql://shogun-producao-database.chci48mw83um.us-east-1.rds.amazonaws.com:3306/db_soat_producao?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
   PEDIDOS_URL: http://localhost:8080/v1/pedidos
